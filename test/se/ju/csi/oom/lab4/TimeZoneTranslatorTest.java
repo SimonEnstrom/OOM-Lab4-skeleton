@@ -23,7 +23,7 @@ public class TimeZoneTranslatorTest {
 		assertEquals(today.toString(), tomorrow.toString());
 		
 	}
-	
+	//working?
 	@Test
 	public void testShiftTimeZone2() {
 		DateTime sweden = new DateTime(2016, 1, 1, 06, 00, 00);
