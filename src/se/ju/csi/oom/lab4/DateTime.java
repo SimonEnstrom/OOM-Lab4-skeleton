@@ -13,7 +13,7 @@ public class DateTime {
 	private int second;
 	
 	public String toString() {
-		return String.format("%04d-%02d-%02d %02d:%02d:%02d", year, month, day, hour, minute);
+		return String.format("%04d-%02d-%02d %02d:%02d", year, month, day, hour, minute);
 	}
 	
 	public DateTime(int year, int month, int day, int hour, int minute) {
@@ -34,7 +34,6 @@ public class DateTime {
 		this.day = Integer.parseInt(m.group(3));
 		this.hour = Integer.parseInt(m.group(4));
 		this.minute = Integer.parseInt(m.group(5));
-		this.second = Integer.parseInt(m.group(6));
 	}
 
 	public int getYear() {
