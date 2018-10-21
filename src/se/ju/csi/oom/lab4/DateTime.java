@@ -13,10 +13,10 @@ public class DateTime {
 	private int second;
 	
 	public String toString() {
-		return String.format("%04d-%02d-%02d %02d:%02d:%02d", year, month, day, hour, minute, second);
+		return String.format("%04d-%02d-%02d %02d:%02d", year, month, day, hour, minute);
 	}
 	
-	public DateTime(int year, int month, int day, int hour, int minute, int second) {
+	public DateTime(int year, int month, int day, int hour, int minute) {
 		this.year = year;
 		this.month = month;
 		this.day = day;
@@ -26,7 +26,7 @@ public class DateTime {
 	}
 
 	public DateTime(String dateString) {
-		Pattern p = Pattern.compile("(\\d\\d\\d\\d)-(\\d\\d)-(\\d\\d) (\\d\\d):(\\d\\d):(\\d\\d)");
+		Pattern p = Pattern.compile("(\\d\\d\\d\\d)-(\\d\\d)-(\\d\\d) (\\d\\d):(\\d\\d)");
 		Matcher m = p.matcher(dateString);
 		m.find();
 		this.year = Integer.parseInt(m.group(1));
@@ -34,7 +34,6 @@ public class DateTime {
 		this.day = Integer.parseInt(m.group(3));
 		this.hour = Integer.parseInt(m.group(4));
 		this.minute = Integer.parseInt(m.group(5));
-		this.second = Integer.parseInt(m.group(6));
 	}
 
 	public int getYear() {
@@ -57,7 +56,4 @@ public class DateTime {
 		return minute;
 	}
 
-	public int getSecond() {
-		return second;
-	}
 }
