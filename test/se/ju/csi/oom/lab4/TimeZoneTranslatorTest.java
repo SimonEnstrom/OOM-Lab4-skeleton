@@ -17,8 +17,8 @@ public class TimeZoneTranslatorTest {
 
 	@Test
 	public void testShiftTimeZone() {
-		DateTime today = new DateTime(2018, 10, 20, 20, 39, 15);
-		DateTime tomorrow = new DateTime(2018, 10, 21, 02, 39, 15);
+		DateTime today = new DateTime(2018, 10, 20, 20, 39);
+		DateTime tomorrow = new DateTime(2018, 10, 21, 02, 39);
 		today = TimeZoneTranslator.shiftTimeZone(today, 1, 7);
 		assertEquals(today.toString(), tomorrow.toString());
 		
@@ -26,17 +26,17 @@ public class TimeZoneTranslatorTest {
 	//working?
 	@Test
 	public void testShiftTimeZone2() {
-		DateTime sweden = new DateTime(2016, 1, 1, 06, 00, 00);
+		DateTime sweden = new DateTime(2016, 1, 1, 06, 00);
 		sweden = TimeZoneTranslator.shiftTimeZone(sweden, 1, -8);
-		DateTime us = new DateTime(2015, 12, 31, 21, 00, 00);
+		DateTime us = new DateTime(2015, 12, 31, 21, 00);
 		assertEquals(sweden.toString(), us.toString());
 	}
 	@Test
 	public void testShiftEventTimeZone() {
-		DateTime startDate = new DateTime(2018, 10, 20, 14, 00, 00);
-		DateTime endDate = new DateTime(2018, 10, 20, 16, 00, 00);
-		DateTime checkStartDate = new DateTime(2018, 10, 20, 20, 00, 00);
-		DateTime checkEndDate = new DateTime(2018, 10, 20, 22, 00, 00);
+		DateTime startDate = new DateTime(2018, 10, 20, 14, 00);
+		DateTime endDate = new DateTime(2018, 10, 20, 16, 00);
+		DateTime checkStartDate = new DateTime(2018, 10, 20, 20, 00);
+		DateTime checkEndDate = new DateTime(2018, 10, 20, 22, 00);
 		Person Jonte = new Person("Jonte");
 		Person Adam = new Person("Adam");
 		Person Gunde = new Person("Gunde");
